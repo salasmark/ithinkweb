@@ -25,3 +25,8 @@ A product needs to have the following information:
 - Cache the view single product API. You are free to use any cache driver
 - Create automated tests for the APIs
 - Say for example, we need a feature where we can display featured products. How would you go about implementing this feature? (You don't need to write code for this, just describe how would you implement it)
+
+Answer: To develop this feature, we will need an identifier of the feature products. I will add another column that will indicate if it is a featured product - a boolen type column. This column can be used to filter featured products, so we only need to anticipate this in the request parameters of the index route.
+
+## Setup
+No additional steps to set up but there is an optional seeder to populate the products table.
