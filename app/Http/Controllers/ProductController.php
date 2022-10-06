@@ -21,9 +21,9 @@ class ProductController extends Controller
     {
         $perPage = $request->get('per_page', 10);
 
-        return response()->json([
-            'data' => $this->repository->paginate($perPage)
-        ]);
+        return response()->json(
+            $this->repository->paginate($perPage)
+        );
     }
     
     public function store(ProductRequest $request): JsonResponse 
@@ -40,5 +40,12 @@ class ProductController extends Controller
             ],
             Response::HTTP_CREATED
         );
+    }
+    
+    public function show(Request $request, $id): JsonResponse 
+    {
+        return response()->json([
+            'data' => $this->repository->show($id)
+        ]);
     }
 }

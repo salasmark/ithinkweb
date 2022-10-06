@@ -19,4 +19,4 @@ Route::get('/', function () {
 });
 
 
-Route::resource('product', ProductController::class)->only(['index', 'store']);
+Route::resource('product', ProductController::class)->only(['index', 'store', 'show']);

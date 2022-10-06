@@ -6,4 +6,5 @@ interface ProductRepositoryInterface
 {
     public function paginate($perPage);
     public function create(array $productDetails);
+    public function show($id);
 }
